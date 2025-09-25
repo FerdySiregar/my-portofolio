@@ -568,7 +568,7 @@ span {
   display: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #333;
+  color: brown;
   margin-left: 20px;
 }
 
@@ -576,12 +576,12 @@ span {
   nav {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #111;
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px brown;
     z-index: 10;
   }
   nav.show {
