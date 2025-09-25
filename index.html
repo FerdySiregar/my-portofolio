@@ -11,10 +11,16 @@
   <body>
     <header>
       <a href="#" class="logo">Ferdy</a>
-      <nav>
-        <a href="#" class="active">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Project</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Skills</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Galery</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <nav id="navbar">
+        <a href="#" class="active">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="#">Project</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="#">Skills</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <a href="#">Galery</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="#">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
       </nav>
+      <div class="burger" id="burger">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
     <section class="home">
@@ -202,6 +208,14 @@
             alert("Selamat datang, " + nama + "!");
         }
     </script>
+    <script>
+  // Burger menu toggle
+  const burger = document.getElementById('burger');
+  const navbar = document.getElementById('navbar');
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+</script>
   </body>
 </html>
 
