@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Ferdy</a>
+      <nav>
+        <a href="#" class="active">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Project</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Skills</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Galery</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-img">
+        <a href="ferdy.jpg"> <img src="ferdy.jpg" /></a>
+      </div>
+      <div class="home-content">
+        <h1>Hi it's <span>Ferdy</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>
+          Welcome To My Website!!. <br />
+          Perkenalkan Nama Saya Ferdy, Saya Adalah Pelajar Di Madrasah Aliyah Kejuruan Negeri Ende (MAKN), Yang Berlokasi Di Nusa Tenggara Timur, Kab. Ende, Kec. Nangapenda, Desa Anaraja, KM 21 Ende-bajawa. <br />
+          Saya Siswa Kelas 10 Dan Saya Mengambil Jurusan Pengembangan Perangkat lunak Dan Gim (PPLG). .
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com/FerdySiregar/TUGAS_13.git"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="https://www.canva.com/design/DAGotZuALWw/6Kz52L_MZQw5wxCXN6RCgg/edit?utm_content=DAGotZuALWw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn">My CV</a>
+      </div>
+    </section>
+
+    <section class="project" id="project">
+      <h2>MY <span>PROJECT</span></h2>
+      <div class="project-container">
+        <div class="project-card">
+         <img src="java.png" alt="Project 1" class="project-img-java" />
+          <h3>Project Java</h3>
+          <p>Ini adalah kalkulator sederhana yang saya buat dari tugas sekolah.</p>
+        </div>
+        <div class="project-card">
+          <img src="buku.png" alt="Project 2" />
+          <h3>Project HTML</h3>
+          <p>Ini adalah website toko buku yang saya buat dari tugas sekolah.</p>
+        </div>
+        <!-- Tambahkan lebih banyak project jika perlu -->
+      </div>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="formlogin.png" alt="Project 1" />
+          <h3>Project HTML</h3>
+          <p>Ini adalah form login yang saya buat dengan referensi dari YouTube.</p>
+        </div>
+        <div class="project-card">
+          <img src="Kotlin.png" alt="Project 2" />
+          <h3>Project KOTLIN</h3>
+          <p>Project ini saya kerjakan dari tugas kelas industri yaitu crocodic.</p>
+        </div>
+        <!-- Tambahkan lebih banyak project jika perlu -->
+      </div>
+    </section>
+
+    <div id="project-popup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="Project Image" />
+    <h3 id="popup-title"></h3>
+    <p id="popup-desc"></p>
+  </div>
+</div>
+
+<script>
+  // Data project (samakan urutan dengan HTML)
+  const projects = [
+    {
+      img: "Java.png",
+      title: "Project JAVA",
+      desc: "Ini adalah kalkulator sederhana yang saya buat dari tugas sekolah."
+    },
+    {
+      img: "buku.png",
+      title: "Project HTML",
+      desc: "Ini adalah website toko buku yang saya buat dari tugas sekolah."
+    },
+    {
+      img: "formlogin.png",
+      title: "Project HTML",
+      desc: "Ini adalah form login yang saya buat dengan referensi dari YouTube."
+    },
+    {
+      img: "Kotlin.png",
+      title: "Project KOTLIN",
+      desc: "Project ini saya kerjakan dari tugas kelas industri yaitu crocodic."
+    }
+  ];
+
+  // Event listener untuk setiap project-card
+  document.querySelectorAll('.project-card').forEach((card, i) => {
+    card.addEventListener('click', () => {
+      document.getElementById('popup-img').src = projects[i].img;
+      document.getElementById('popup-title').innerText = projects[i].title;
+      document.getElementById('popup-desc').innerText = projects[i].desc;
+      document.getElementById('project-popup').style.display = 'flex';
+    });
+  });
+
+  function closePopup() {
+    document.getElementById('project-popup').style.display = 'none';
+  }
+</script>
+
+<section class="skills" id="skills">
+  <h2>MY <span>SKILLS</span></h2>
+  <div class="skills-container">
+    <div class="skill-bar">
+      <span class="skill-icon html"><i class="fab fa-html5"></i></span>
+      <span class="skill-title">HTML</span>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width: 80%;"></div>
+      </div>
+      <span class="skill-value">80%</span>
+    </div>
+    <div class="skill-bar">
+      <span class="skill-icon css"><i class="fab fa-css3-alt"></i></span>
+      <span class="skill-title">CSS</span>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width: 70%;"></div>
+      </div>
+      <span class="skill-value">70%</span>
+    </div>
+    <div class="skill-bar">
+      <span class="skill-icon kotlin"><i class="fas fa-mobile-alt"></i></span>
+      <span class="skill-title">Kotlin</span>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width: 60%;"></div>
+      </div>
+      <span class="skill-value">60%</span>
+    </div>
+    <div class="skill-bar">
+      <span class="skill-icon java"><i class="fab fa-java"></i></span>
+      <span class="skill-title">Java</span>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width: 50%;"></div>
+      </div>
+      <span class="skill-value">50%</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 300);
+    });
+  });
+</script>
+
+<section class="galery" id="galery">
+  <h2>MY <span>GALERY</span></h2>
+  <div class="galery-container">
+    <div class="galery-item">
+      <img src="fe5f07446517f7f671fb6ab2cc7b7cfd.jpg" alt="Galery 1">
+    </div>
+    <div class="galery-item">
+      <img src="8bd271bc797cb0eb9a84393fcabcd2ff.jpg" alt="Galery 2">
+    </div>
+    <div class="galery-item">
+      <img src="bacira.jpg" alt="Galery 3">
+    </div>
+    <div class="galery-item">
+      <img src="DSC05577.JPG" alt="Galery 4">
+    </div>
+    <!-- Tambahkan gambar lain sesuai kebutuhan -->
+  </div>
+</section>
+
+ <script>
+        // Minta nama sebelum masuk
+        let nama = "";
+        while (!nama) {
+            nama = prompt("Masukkan nama kamu untuk melihat portofolio:");
+            if (nama === null) {
+                alert("Kamu membatalkan akses.");
+                window.location.href = "https://google.com";
+                break;
+            }
+        }
+        if (nama) {
+            alert("Selamat datang, " + nama + "!");
+        }
+    </script>
+  </body>
+</html>
+

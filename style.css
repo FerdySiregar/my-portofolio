@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: lrem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: brown;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: brown;
+    border-bottom: 3px solid brown;
+}
+
+
+@media(max-width:995px) {
+    nav {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid brown;
+        border-bottom: 3px solid brown;
+        border-top-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: rgb(48, 54, 59);
+        border-top: 0.1rem solid black;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid brown;
+    }
+
+    img {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: brown;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid brown;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 25px solid brown);
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid brown;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 
+        color 0.3s,
+        background-color 0.3s,
+        box-shadow 0.5s cubic-bezier(.4,2,.6,1),
+        transform 0.4s cubic-bezier(.4,2,.6,1);
+    color: brown;
+}
+
+.social-icons a:active {
+    transform: scale(0.92) translateY(2px);
+    box-shadow: 0 0 40px 10px brown;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: brown;
+    box-shadow: 0 0 25px brown;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: brown;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid brown;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.3);
+    background-color: brown;
+    color: black;
+    box-shadow: 0 0 25px brown;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "software devoloper";
+    color: brown;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid brown;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Devoloper";
+    }
+
+    21%,
+    40% {
+        content: "Student";
+    }
+
+    41%,
+    60% {
+        content: "Designer";
+    }
+
+    61%,
+    80% {
+        content: "Youtuber";
+    }
+
+    81%,
+    100% {
+        content: "Writter";
+    }
+}
+
+
+@media(max-width:1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home.home-content h3 {
+        font-size: 2, 5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+}
+
+/* service section */
+.project {
+    font-family: 'Poppins', Arial, sans-serif;
+    padding: 60px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.project h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project h2 span {
+    color: #c0392b;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 50px; /* tambah jarak antar kartu, misal 50px */
+    margin-bottom: 50px; /* tambah jarak antar baris */
+}
+.project-card {
+    background-color: #111;
+    border: 1px solid #c0392b;
+    padding: 20px;
+    width: 450px;
+    border-radius: 12px;
+    transition: 
+    transform 0.6s cubic-bezier(.4,2,.6,1), 
+    box-shadow 0.8s cubic-bezier(.4,2,.6,1), 
+    border-color 0.6s;
+}
+
+.project-card:hover,
+.project-card:active {
+    box-shadow: 0 0 40px 10px #c0392b, 0 0 80px 20px #fff inset;
+    border-color: #fff;
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.project-img-java {
+    object-fit: contain !important;
+    background: #222; /* opsional, biar tidak transparan */
+}
+
+
+.project-card h3,
+.project-card p,
+.popup-content h3,
+.popup-content p {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+/* Popup Project */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.popup-content {
+  background: #222;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  width: 90vw;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 40px #c0392b;
+  animation: popupShow 0.4s;
+}
+.popup-content img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#popup-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #222;
+    border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+@keyframes popupShow {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.skills {
+    padding: 60px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.skills h2 span {
+    color: #c0392b;
+}
+
+.skills-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    background: #181818;
+    border-radius: 12px;
+    padding: 12px 18px;
+    box-shadow: 0 2px 12px #0002;
+    transition: box-shadow 0.3s;
+}
+
+.skill-bar:hover {
+    box-shadow: 0 4px 24px #c0392b33;
+}
+
+.skill-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    background: #232323;
+    color: #fff;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.3s, color 0.3s;
+}
+.skill-icon.html { color: #e44d26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.java { color: #f89820; }
+.skill-icon.kotlin { color: #7f52ff; }
+
+.skill-title {
+    width: 80px;
+    font-weight: 600;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.bar-bg {
+    flex: 1;
+    height: 9px;
+    background: #232323;
+    border-radius: 6px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c0392b 60%, #ffb347 100%);
+    border-radius: 6px;
+    transition: width 1s cubic-bezier(.4,2,.6,1);
+}
+
+.skill-value {
+    width: 40px;
+    text-align: right;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.galery {
+    padding: 60px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.galery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.galery h2 span {
+    color: #c0392b;
+}
+
+.galery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.galery-item {
+    width: 220px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #222;
+    background: #222;
+    transition: transform 0.4s;
+}
+
+.galery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.galery-item:hover img {
+    transform: scale(1.08);
+}
